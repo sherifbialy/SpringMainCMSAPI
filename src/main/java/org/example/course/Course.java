@@ -9,8 +9,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+@Setter
+@Getter
 @Entity
-
+@Table(
+        name = "course"
+)
 public class Course
 {
     @Id
@@ -32,35 +36,4 @@ public class Course
     public Course() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Topic getTopic() {
-        return topic;
-    }
-
-    public void setTopic(Topic topic) {
-        this.topic = topic;
-    }
 }

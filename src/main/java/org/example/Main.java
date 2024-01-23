@@ -14,8 +14,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @Import({BeanApplication.class}) //have somebody explain this
-@EntityScan(basePackages = {"com.sumerge.bean","org.example"})
-@EnableJpaRepositories(basePackages = {"com.sumerge.bean","org.example"})
+@EntityScan(basePackages = {"com.sumerge.bean","org.example.course","org.example.configuration"})
+@EnableJpaRepositories(basePackages = {"com.sumerge.bean","org.example.course"},entityManagerFactoryRef ="entityManagerFactory"
+)
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class,args);

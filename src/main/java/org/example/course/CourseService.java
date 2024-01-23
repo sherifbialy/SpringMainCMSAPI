@@ -6,9 +6,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class CourseService {
 
     private final CourseRepository repository;
+
+    @Autowired
     public CourseService(CourseRepository repository) {
         this.repository = repository;
     }

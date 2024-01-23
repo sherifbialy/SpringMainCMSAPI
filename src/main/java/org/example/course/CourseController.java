@@ -1,6 +1,7 @@
 package org.example.course;
 
 import com.sumerge.bean.Topic;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,10 +11,11 @@ import java.util.List;
 public class CourseController {
 
 
+
     private final CourseService courseService;
-
-
-    public CourseController( @Qualifier("courseService") CourseService service){
+//    @Qualifier("courseService")
+    @Autowired
+    public CourseController( CourseService service){
         this.courseService=service;
     }
     @RequestMapping("/topics/{id}/courses")
